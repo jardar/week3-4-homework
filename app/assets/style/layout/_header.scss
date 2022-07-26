@@ -1,0 +1,64 @@
+header {
+    background-color: $color-primary;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phone() {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &__logo-holder {
+            align-self: center;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 80px;
+        height: 72px;
+        @include make-logo("../images/logo-white.png", contain);
+
+        &:hover {
+            filter: contrast(50%);
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        li a {
+            display: block;
+            text-decoration: none;
+            @include set-font(20px, $fw-regular);
+            padding: 25px 32px;
+            color: white;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+        @include phone() {
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                border: 1px solid white;
+
+                a {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,453 @@
+// home page
+
+.home-banner {
+    height: 787px;
+    // height: 100vh;
+    @include bk-image("../images/home-header.png", cover);
+    display: flex;
+    align-items: center;
+
+    @include pad() {
+        background-image: url("../images/home-header-sm.png");
+    }
+
+    @include phone() {
+        height: 396px;
+        background-image: url("../images/home-header.png");
+    }
+
+    .home-banner__info {
+        width: 100%;
+        text-align: right;
+        color: $color-secondary;
+
+        p {
+            @include set-font(36px, $fw-regular)
+        }
+
+        h2 {
+            @include set-font(64px, $fw-bold)
+        }
+
+        a {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: $color-primary;
+            @include set-font(20px, $fw-medium)
+        }
+
+        @include phone() {
+
+            p {
+                @include set-font(16px, $fw-regular)
+            }
+
+            h2 {
+                @include set-font(24px, $fw-bold)
+            }
+
+        }
+    }
+}
+
+.home-expert {
+    background-color: #FBF2F2;
+    color: #650300;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include phone() {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 72px;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include phone() {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 0 24px;
+
+        @include pad() {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 24px;
+        }
+
+        @include phone() {
+            gap: 24px 0;
+        }
+    }
+
+    &__card {
+        width: 25%;
+        text-align: center;
+
+        @include pad() {
+            width: 48%;
+        }
+
+        @include phone() {
+            width: 100%;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: black;
+        }
+    }
+}
+
+.home-clasic {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include phone() {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        @include set-font(48px, $fw-regular);
+        color: #650300;
+        text-align: center;
+        margin-bottom: 48px;
+
+        @include phone() {
+            @include set-font(24px, $fw-regular);
+            margin-bottom: 24px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 0 24px;
+        text-align: center;
+
+        @include pad() {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px 0;
+        }
+    }
+
+    li {
+        @include pad() {
+            width: 50%;
+        }
+
+        @include phone() {
+            width: 100%;
+        }
+    }
+
+    img {
+        margin-bottom: 8px;
+    }
+
+    h3 {
+        @include set-font(48px, $fw-regular);
+        color: $color-primary;
+    }
+
+}
+
+.home-partner {
+    height: 608px;
+    @include bk-image("../images/index-bg.png", cover);
+    // background-image: url("../images/index-bg.png");
+    // background-size: cover;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include pad() {
+        height: 960px;
+        background-image: url("../images/index-bg-md.png");
+    }
+
+    @include phone() {
+        height: 820px;
+        background-image: url("../images/index-bg-sm.png");
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        @include set-font(48px, $fw-bold);
+        margin-bottom: 48px;
+
+        @include phone() {
+            @include set-font(24px, $fw-bold);
+            margin-bottom: 24px;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        @include phone() {
+            display: flex;
+            flex-direction: column;
+            gap: 24px 0;
+        }
+
+        li {
+            width: 50%;
+
+            @include pad() {
+                width: 100%;
+            }
+
+        }
+
+
+        h3 {
+            @include set-font(48px, $fw-black);
+            font-style: italic;
+            color: $color-primary;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            background-color: #fff;
+        }
+
+        @include pad() {
+            flex-direction: column;
+            gap: 24px 0;
+        }
+    }
+
+    &__photo-1 {
+        // width: 648px;
+        height: 240px;
+        @include bk-image("../images/home-section4-1.png", cover);
+
+        @include phone() {
+            background-image: url("../images/home-section4-1-sm.png");
+        }
+    }
+
+    &__photo-2 {
+        // width: 648px;
+        height: 240px;
+        @include bk-image("../images/home-section4-2.png", cover);
+
+        @include phone() {
+            background-image: url("../images/home-section4-2-sm.png");
+        }
+    }
+}
+
+.home-recommend {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include phone() {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        @include set-font(48px, $fw-bold);
+        color: $color-secondary;
+        text-align: center;
+        margin-bottom: 48px;
+
+        @include phone() {
+            @include set-font(24px, $fw-bold);
+            margin-bottom: 24px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 0 24px;
+
+        @include pad() {
+            flex-wrap: wrap;
+            gap: 24px 24px;
+        }
+
+        @include phone() {
+            gap: 16px 0;
+        }
+    }
+
+    &__card {
+        width: 25%;
+
+        border: 1px solid #DEE2E6;
+        border-radius: 4px;
+        box-shadow: 0px 2px 6px #00000029;
+
+        @include pad() {
+            width: 48%;
+        }
+
+        @include phone() {
+            width: 100%;
+        }
+
+        img {
+            margin-bottom: 16px;
+        }
+    }
+
+    &-card-body {
+        height: 205px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__title {
+            p {
+                @include set-font(16px, $fw-regular);
+                color: black;
+                text-align: left;
+                margin-bottom: 8px;
+            }
+
+            p:first-child {
+                font-weight: 500;
+            }
+        }
+
+        &__date {
+            @include set-font(14px, $fw-regular);
+            margin-bottom: 16px;
+            color: black;
+        }
+    }
+}
+
+.home-contactus {
+    background-color: $color-bg-1;
+    color: black;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include phone() {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &-grid {
+        width: 48%;
+
+        @include pad() {
+            width: 65%;
+        }
+
+        @include phone() {
+            width: 96%;
+        }
+    }
+
+    &__title {
+        @include set-font(48px, $fw-bold);
+        margin-bottom: 48px;
+        text-align: center;
+        color: #650300;
+
+        @include phone() {
+            @include set-font(24px, $fw-bold);
+            margin-bottom: 24px;
+        }
+    }
+
+    p {
+        @include set-font(20px, $fw-regular);
+        margin-bottom: 24px;
+
+        @include pad() {
+            @include set-font(16px, $fw-regular);
+        }
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        @include set-font(16px, $fw-regular);
+
+        label {
+            // @include set-font(16px, $fw-regular);
+            margin-bottom: 8px;
+        }
+
+        input {
+            height: 36px;
+            margin-bottom: 16px;
+            background-color: $color-bg-1;
+        }
+
+        textarea {
+            margin-bottom: 16px;
+            background-color: $color-bg-1;
+        }
+
+        input[type=checkbox] {
+            background: $color-bg-1;
+            width: 22px;
+            height: 22px;
+            margin: 0 12px 0 0;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+
+            @include phone() {
+                margin: 0 4px 0 0;
+            }
+        }
+
+        ::placeholder {
+            color: rgba(black, 0.2);
+            @include set-font(16px, $fw-regular);
+            padding-left: 12px;
+        }
+
+        button {
+            display: block;
+            width: 60%;
+            align-self: center;
+            @include set-font(16px, $fw-regular);
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background-color: $color-primary;
+            color: white;
+            margin-top: 48px;
+
+            @include phone() {
+                width: 96%;
+                margin-top: 24px;
+            }
+        }
+    }
+}

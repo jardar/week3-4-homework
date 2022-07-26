@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+.container {
+    @include container(1320px);
+
+    @include pad() {
+        @include container(720px);
+    }
+
+    @include phone() {
+        @include container(372px);
+    }
+
+}

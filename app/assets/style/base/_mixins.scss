@@ -1,0 +1,60 @@
+// 把一些技巧，記不起來的，封裝成 mixin
+// @include container(1200px) 來使用
+@mixin container($maxw) {
+    max-width: $maxw;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+// 24/30, 36/54, 64/96
+@mixin set-font($font-size, $font-weight) {
+    font-size: $font-size;
+    line-height: 1.5;
+    font-weight: $font-weight;
+}
+
+// like this: <h1 class="header__logo"><a href="index.html">眼鏡官網入口</a></h1>
+@mixin make-logo($img-url, $size) {
+    @include bk-image($img-url, $size);
+    @include hide-text();
+}
+
+@mixin bk-image($img-url, $size) {
+    background-image: url($img-url);
+    background-size: $size;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@mixin hide-text {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// 設定一些 @media
+// 使用方式，
+// .header { 
+//      width: 100px;
+//      @include pad(){
+//          width: 70%;
+//      }    
+
+@mixin pad {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin rwd($break-point) {
+    @media (max-width: $break-point) {
+        @content;
+    }
+}

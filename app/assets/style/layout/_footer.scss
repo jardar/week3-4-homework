@@ -1,0 +1,172 @@
+footer {
+    background-color: #AA0601;
+}
+
+.footer {
+    padding-top: 36px;
+
+    @include phone() {
+        max-width: 100%;
+        margin: 0;
+        padding-top: 24px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px 0px;
+
+        @include phone() {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__menu {
+        width: 65%;
+        display: flex;
+        margin-left: -24px;
+
+        a {
+            padding: 12px 24px;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+        @include pad() {
+            width: 75%;
+
+            a {
+                padding: 8px 24px;
+            }
+        }
+
+        @include phone() {
+            display: none;
+        }
+    }
+
+    &__social {
+        width: 35%;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            width: 48px;
+            height: 48px;
+        }
+
+        a {
+            color: white;
+            padding-left: 32px;
+
+            &:hover {
+                filter: brightness(50%);
+            }
+        }
+
+        @include pad() {
+            width: 25%;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            a {
+                padding: 0px 8px;
+            }
+        }
+
+        @include phone() {
+            width: 50%;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+        }
+    }
+
+    &__contact {
+        margin-bottom: 32px;
+
+        li a {
+            @include set-font(36px, $fw-regular);
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+        span {
+            font-size: 36px;
+            margin-right: 20px;
+        }
+
+        @include phone() {
+            width: 50%;
+            margin-bottom: 24px;
+
+            li a {
+                @include set-font(16px, $fw-regular);
+            }
+
+            span {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        border-top: 1px solid white;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                @include set-font(14px, $fw-regular);
+                margin-left: 48px;
+            }
+
+            a:hover {
+                color: orange;
+            }
+        }
+
+        @include phone() {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 16px;
+            padding-bottom: 24px;
+            gap: 8px 0;
+
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px 0;
+
+                li {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+
+}
