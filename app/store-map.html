@@ -1,0 +1,60 @@
+---
+title: 眼鏡官網門市頁-地圖
+layout: ./app/layout.ejs
+engine: ejs
+---
+
+<section class="store-map container">
+    <h2 class="mb-store">門市據點</h2>
+    <div class="store-map-area">
+        <label for="area">選擇分店</label>
+        <select id="area">
+            <option value="">台北中山旗艦店</option>
+        </select>
+    </div>
+
+    <div class="store-map-grid">
+        <div class="store-map-card">
+            <img src="assets/images/storepage-1.png" alt="store 1">
+            <div class="store-map-card__body">
+                <h3 class="store-map-card__title">台北中山旗艦店</h3>
+                <div class="store-map-card__contact">
+                    <ul>
+                        <li>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    call
+                                </span>
+                                電話：(02)000-1234
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                營業時間：10:00-21:00
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                地址：台北市中山區南京東路25巷2-1號
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-map-card__map">
+            <picture>
+                <source media="(max-width: 767px)" srcset="assets/images/store-map-sm.png">
+                <source media="(max-width: 992px)" srcset="assets/images/store-map-md.png">
+                <img src="assets/images/store-map.png" alt="store map">
+            </picture>
+        </div>
+    </div>
+</section>
