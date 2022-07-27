@@ -1,10 +1,14 @@
 // 把一些技巧，記不起來的，封裝成 mixin
 // @include container(1200px) 來使用
 @mixin container($maxw) {
+    @include padding-container($maxw, 24px);
+}
+
+@mixin padding-container($max-w, $gutter) {
     max-width: $maxw;
     margin: 0 auto;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
 }
 
 // 24/30, 36/54, 64/96
