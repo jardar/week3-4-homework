@@ -46,6 +46,8 @@
             opacity: 0.75;
             padding: 6px 12px;
 
+            @include makeSelectArrow("../images/arrow_drop_down.png", white);
+
             @include phone() {
                 width: 276px;
             }
@@ -83,11 +85,18 @@
         &-body {
             padding: 16px 24px;
 
+            li {
+                margin-bottom: 8px;
+            }
+
+            li:last-child {
+                margin-bottom: 0;
+            }
+
             p {
                 @include set-font(20px, $fw-regular);
                 display: flex;
                 align-items: flex-start;
-                margin-bottom: 8px;
 
                 span {
                     margin-right: 10px;

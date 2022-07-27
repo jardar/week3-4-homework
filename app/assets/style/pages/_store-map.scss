@@ -109,17 +109,19 @@
         &__contact {
             padding: 16px 24px;
 
+            li {
+                margin-bottom: 8px;
+            }
+
             li:last-child {
-                p {
-                    margin-bottom: 0;
-                }
+                margin-bottom: 0;
             }
 
             p {
                 @include set-font(20px, $fw-regular);
                 display: flex;
                 align-items: flex-start;
-                margin-bottom: 8px;
+
 
                 span {
                     margin-right: 10px;

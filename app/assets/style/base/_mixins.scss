@@ -25,6 +25,15 @@
     padding-bottom: $py;
 }
 
+@mixin makeSelectArrow($img-url, $bg-color) {
+    appearance: none;
+    background-image: url($img-url);
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-color: $bg-color;
+}
+
 // like this: <h1 class="header__logo"><a href="index.html">眼鏡官網入口</a></h1>
 @mixin make-logo($img-url, $size) {
     @include bk-image($img-url, $size);
