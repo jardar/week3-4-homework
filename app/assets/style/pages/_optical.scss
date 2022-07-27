@@ -1,0 +1,192 @@
+.optical-tab {
+    @include set-font(32px, $fw-medium);
+    display: flex;
+    text-align: center;
+
+    @include pad() {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        @include set-font(24px, $fw-medium);
+    }
+
+    @include phone() {
+        @include set-font(16px, $fw-medium);
+    }
+
+    a {
+        width: 33.33333%;
+        color: black;
+        @include padding-y(24px);
+        border: 1px solid $color-border-1;
+
+        @include pad() {
+            @include padding-y(16px);
+        }
+    }
+
+    a:first-child {
+        border-bottom: 8px solid $color-primary;
+    }
+}
+
+.optical-banner {
+    display: flex;
+    height: 296px;
+    // margin-bottom: 80px;
+
+    @include phone() {
+        height: 136px;
+        margin-bottom: 40px;
+    }
+
+    &__img1 {
+        width: 50%;
+        @include bk-image("../images/product-header-1.png", cover);
+
+    }
+
+    &__img2 {
+        width: 50%;
+        @include bk-image("../images/product-header-2.png", cover);
+    }
+
+    @include pad() {
+        &__img1 {
+            width: 50%;
+            @include bk-image("../images/product-header-sm-1.png", cover);
+
+        }
+
+        &__img2 {
+            width: 50%;
+            @include bk-image("../images/product-header-sm-2.png", cover);
+        }
+    }
+}
+
+.optical-product {
+    color: black;
+    text-align: center;
+    // margin-bottom: 80px;
+
+    @include phone() {
+        margin-bottom: 64px;
+    }
+
+    &__name {
+        @include set-font(42px, $fw-medium);
+
+        @include phone() {
+            @include set-font(24px, $fw-medium);
+        }
+    }
+
+    &__ctname {
+        @include set-font(32px, $fw-regular);
+        margin-bottom: 32px;
+
+        @include phone() {
+            @include set-font(24px, $fw-medium);
+            margin-bottom: 24px;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 80px 24px;
+
+        @include pad() {
+            gap: 40px 24px;
+        }
+    }
+
+    &__card {
+        width: 23%;
+
+        @include pad() {
+            width: 46%;
+        }
+
+        @include phone() {
+            width: 100%;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        p {
+            width: 50%;
+            @include set-font(24px, $fw-regular);
+            color: $color-primary;
+            text-align: right;
+        }
+
+        p:first-child {
+            color: black;
+            text-align: left;
+        }
+    }
+
+    &-color {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            width: 24px;
+            height: 24px;
+            background-color: $color-block-2;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        div:first-child {
+            background-color: $color-block-1;
+        }
+    }
+}
+
+.optical-pagebar {
+    color: $color-border-bar;
+    // margin-bottom: 80px;
+
+    @include phone() {
+        margin-bottom: 64px;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 12px 16px;
+            border: 1px solid $color-border-bar;
+            @include set-font(18px, $fw-regular);
+
+            @include phone() {
+                padding: 10px 12px;
+                @include set-font(16px, $fw-regular);
+            }
+        }
+
+
+
+        li:first-child,
+        li:last-child {
+            @include set-font(19px, $fw-regular);
+            background-color: $color-bg-2;
+
+            @include phone() {
+                padding: 11px 13px;
+                @include set-font(16px, $fw-regular);
+                font-family: Roboto;
+            }
+        }
+
+    }
+}

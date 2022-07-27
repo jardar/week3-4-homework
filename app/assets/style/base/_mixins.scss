@@ -14,6 +14,17 @@
     font-weight: $font-weight;
 }
 
+// padding
+@mixin padding-x($px) {
+    padding-left: $px;
+    padding-right: $px;
+}
+
+@mixin padding-y($py) {
+    padding-top: $py;
+    padding-bottom: $py;
+}
+
 // like this: <h1 class="header__logo"><a href="index.html">眼鏡官網入口</a></h1>
 @mixin make-logo($img-url, $size) {
     @include bk-image($img-url, $size);
