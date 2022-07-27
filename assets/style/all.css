@@ -166,6 +166,19 @@ img {
       padding-left: 12px;
       padding-right: 12px; } }
 
+.mb-1 {
+  margin-bottom: 80px; }
+  @media (max-width: 992px) {
+    .mb-1 {
+      margin-bottom: 80px; } }
+  @media (max-width: 767px) {
+    .mb-1 {
+      margin-bottom: 40px; } }
+
+.mark-1 {
+  color: white;
+  background-color: black; }
+
 header {
   background-color: #AA0601; }
 
@@ -837,5 +850,195 @@ footer {
         .home-contactus-form button {
           width: 96%;
           margin-top: 24px; } }
+
+.optical-tab {
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
+  @media (max-width: 992px) {
+    .optical-tab {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 500; } }
+  @media (max-width: 767px) {
+    .optical-tab {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 500; } }
+  .optical-tab a {
+    width: 33.33333%;
+    color: black;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border: 1px solid #DCDCDC; }
+    @media (max-width: 992px) {
+      .optical-tab a {
+        padding-top: 16px;
+        padding-bottom: 16px; } }
+  .optical-tab a:first-child {
+    border-bottom: 8px solid #AA0601; }
+
+.optical-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 296px; }
+  @media (max-width: 767px) {
+    .optical-banner {
+      height: 136px;
+      margin-bottom: 40px; } }
+  .optical-banner__img1 {
+    width: 50%;
+    background-image: url("../images/product-header-1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .optical-banner__img2 {
+    width: 50%;
+    background-image: url("../images/product-header-2.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  @media (max-width: 992px) {
+    .optical-banner__img1 {
+      width: 50%;
+      background-image: url("../images/product-header-sm-1.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    .optical-banner__img2 {
+      width: 50%;
+      background-image: url("../images/product-header-sm-2.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; } }
+
+.optical-product {
+  color: black;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .optical-product {
+      margin-bottom: 64px; } }
+  .optical-product__name {
+    font-size: 42px;
+    line-height: 1.5;
+    font-weight: 500; }
+    @media (max-width: 767px) {
+      .optical-product__name {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 500; } }
+  .optical-product__ctname {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 32px; }
+    @media (max-width: 767px) {
+      .optical-product__ctname {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 24px; } }
+  .optical-product-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 80px 24px; }
+    @media (max-width: 992px) {
+      .optical-product-list {
+        gap: 40px 24px; } }
+  .optical-product__card {
+    width: 23%; }
+    @media (max-width: 992px) {
+      .optical-product__card {
+        width: 46%; } }
+    @media (max-width: 767px) {
+      .optical-product__card {
+        width: 100%; } }
+  .optical-product-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .optical-product-item p {
+      width: 50%;
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #AA0601;
+      text-align: right; }
+    .optical-product-item p:first-child {
+      color: black;
+      text-align: left; }
+  .optical-product-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .optical-product-color div {
+      width: 24px;
+      height: 24px;
+      background-color: #B75929;
+      border-radius: 4px;
+      margin-right: 8px; }
+    .optical-product-color div:first-child {
+      background-color: #5F3E2D; }
+
+.optical-pagebar {
+  color: #555555; }
+  @media (max-width: 767px) {
+    .optical-pagebar {
+      margin-bottom: 64px; } }
+  .optical-pagebar-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .optical-pagebar-list li {
+      padding: 12px 16px;
+      border: 1px solid #555555;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 400; }
+      @media (max-width: 767px) {
+        .optical-pagebar-list li {
+          padding: 10px 12px;
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: 400; } }
+    .optical-pagebar-list li:first-child,
+    .optical-pagebar-list li:last-child {
+      font-size: 19px;
+      line-height: 1.5;
+      font-weight: 400;
+      background-color: #F2F2F2; }
+      @media (max-width: 767px) {
+        .optical-pagebar-list li:first-child,
+        .optical-pagebar-list li:last-child {
+          padding: 11px 13px;
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: 400;
+          font-family: Roboto; } }
 
 /*# sourceMappingURL=all.css.map */
