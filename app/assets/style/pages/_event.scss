@@ -1,0 +1,264 @@
+.event {
+    color: black;
+
+    &-header-bar {
+        background-color: $color-red-dark;
+        margin-bottom: 24px;
+
+        @include pad() {
+            margin-bottom: 8px;
+        }
+
+        @include phone() {
+            margin-bottom: 16px;
+        }
+    }
+
+    &-header {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include phone() {
+            max-width: 100%;
+            justify-content: space-around;
+        }
+
+
+        &-list {
+            display: flex;
+
+
+            li a {
+                @include set-font(20px, $fw-bold);
+                @include padding-x(24px);
+
+                @include phone() {
+                    @include set-font(16px, $fw-bold);
+                    @include padding-y(12px);
+
+                }
+            }
+
+            li:first-child a {
+                padding-left: 0;
+
+                @include phone() {
+                    padding-left: 12px;
+                }
+            }
+        }
+
+
+        &__search {
+            @include phone() {
+                display: none;
+            }
+
+            span {
+                font-size: 40px;
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+    &-bread {
+        @include set-font(16px, $fw-regular);
+        display: block;
+        margin-bottom: 8px;
+
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &-tags {
+        display: block;
+        color: $color-primary;
+        margin-bottom: 8px;
+        @include set-font(24px, $fw-bold);
+
+        @include phone() {
+            @include set-font(16px, $fw-bold);
+        }
+
+        span {
+            margin-left: 16px;
+        }
+    }
+
+    &-main {
+        display: flex;
+        gap: 0 24px;
+        margin-bottom: 40px;
+
+        @include phone() {
+            margin-bottom: 64px;
+        }
+
+        &-content {
+            width: 66%;
+
+            @include pad() {
+                width: 75%;
+            }
+
+            @include phone() {
+                width: 100%;
+            }
+
+            h2 {
+                @include set-font(48px, $fw-regular);
+
+                @include phone() {
+                    @include set-font(24px, $fw-regular);
+                }
+            }
+
+            small {
+                display: block;
+                @include set-font(24px, $fw-medium);
+                margin-bottom: 16px;
+
+                @include pad() {
+                    margin-bottom: 24px;
+                }
+
+                @include phone() {
+                    @include set-font(16px, $fw-medium);
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-list {
+                li {
+                    margin-bottom: 40px;
+
+                    @include pad() {
+                        margin-bottom: 24px;
+                    }
+
+                    @include phone() {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                img {
+                    object-fit: cover;
+                    margin-bottom: 8px;
+
+                    @include pad() {
+                        margin-bottom: 16px;
+                    }
+
+                    @include phone() {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                p {
+                    @include set-font(16px, $fw-regular);
+                }
+            }
+        }
+
+        &-taglist {
+            width: 33%;
+            color: $color-primary;
+
+            @include phone() {
+                display: none;
+            }
+
+            p {
+                @include set-font(32px, $fw-bold);
+                display: flex;
+                align-items: center;
+                margin-bottom: 4px;
+
+
+                @include pad() {
+                    @include set-font(16px, $fw-bold);
+                    margin-bottom: 8px;
+                }
+
+                span {
+                    font-size: 48px;
+                    margin-right: 8px;
+
+
+                    @include pad() {
+                        font-size: 16px;
+                        margin-right: 2px;
+                    }
+                }
+            }
+
+            small {
+                display: block;
+                @include set-font(24px, $fw-bold);
+
+                margin-bottom: 4px;
+
+                span {
+                    margin-left: 16px;
+                }
+
+                @include pad() {
+                    @include set-font(16px, $fw-bold);
+                    margin-bottom: 0;
+
+                }
+            }
+        }
+    }
+
+    &-footer {
+        @include phone() {
+            display: none;
+        }
+
+        &-iconlist {
+            display: flex;
+            gap: 0 16px;
+            margin-bottom: 16px;
+
+            a {
+                @include set-font(16px, $fw-bold);
+                color: black;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+
+        }
+
+        &-nav {
+            border-top: 1px solid #707070;
+            padding-top: 24px;
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+
+
+            a {
+                @include set-font(16px, $fw-regular);
+                @include padding-x(16px);
+                color: black;
+
+                span {
+                    vertical-align: middle;
+                    font-size: 22px;
+
+                }
+            }
+        }
+    }
+
+
+}

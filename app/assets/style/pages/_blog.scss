@@ -1,0 +1,136 @@
+.blog {
+    color: black;
+    margin-top: 96px;
+
+    @include pad() {
+        margin-top: 80px;
+    }
+
+    @include phone() {
+        margin-top: 40px;
+        max-width: 100%;
+    }
+
+    h2 {
+        @include set-font(48px, $fw-bold);
+        border-left: 8px solid $color-secondary;
+        padding-left: 16px;
+
+        @include phone() {
+            @include set-font(24px, $fw-bold);
+        }
+    }
+
+    &-card {
+        display: flex;
+        gap: 0 24px;
+
+        @include phone() {
+            flex-direction: column;
+        }
+
+        img {
+            width: 49%;
+            object-fit: contain;
+
+            @include phone() {
+                width: 100%;
+            }
+        }
+
+        &-body {
+            width: 49%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include phone() {
+                width: 100%;
+            }
+
+            &-subject {
+                h3 {
+                    a {
+                        text-decoration: none;
+                        @include set-font(32px, $fw-regular);
+                        color: $color-red-dark;
+
+                        @include pad() {
+                            @include set-font(24px, $fw-regular);
+                        }
+                    }
+                }
+
+                &-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include set-font(16px, $fw-medium);
+
+
+
+                    :first-child {
+                        @include set-font(20px, $fw-medium);
+
+                        @include pad() {
+                            @include set-font(16px, $fw-medium);
+                        }
+                    }
+                }
+
+                p {
+                    @include set-font(20px, $fw-regular);
+                    color: $color-border-bar;
+
+                    @include pad() {
+                        @include set-font(16px, $fw-regular);
+                        height: 144px;
+                        overflow: hidden;
+                    }
+
+                    @include phone() {
+                        display: none;
+                    }
+                }
+
+            }
+
+            &__more {
+                a {
+                    @include set-font(36px, $fw-black);
+                    color: $color-red-dark;
+                    text-align: right;
+
+                    @include pad() {
+                        display: none;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    &-pager {
+        display: flex;
+        justify-content: center;
+        @include set-font(18px, $fw-regular);
+
+        li {
+            border: 1px solid $color-border-bar;
+            padding: 12px 16px;
+        }
+
+        li:first-child,
+        li:last-child {
+            background-color: $color-bg-2;
+            @include set-font(19px, $fw-regular);
+            padding: 11px 16px;
+        }
+
+        li:first-child {
+            background-color: white;
+        }
+    }
+
+}
