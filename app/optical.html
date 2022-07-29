@@ -6,14 +6,22 @@ engine: ejs
 
 <!-- // prodcut page - optical -->
 <nav class="optical-tab container">
-    <a href="#">OPTICAL</a>
-    <a href="#">SUNGLASSES</a>
+    <a href="#" class="tab-active">OPTICAL</a>
+    <a href="sunglasses.html">SUNGLASSES</a>
     <a href="#">FUNCTIONAL</a>
 </nav>
 
 <section class="optical-banner mb-1">
-    <div class="optical-banner__img1"></div>
-    <div class="optical-banner__img2"></div>
+    <picture class="optical-banner__img1">
+        <source media="(max-width: 767px)" srcset="assets/images/product-header-sm-1.png">
+        <source media="(max-width: 992px)" srcset="assets/images/product-header-1.png">
+        <img src="assets/images/product-header-1.png" alt="product header 1">
+    </picture>
+    <picture class="optical-banner__img2">
+        <source media="(max-width: 767px)" srcset="assets/images/product-header-sm-2.png">
+        <source media="(max-width: 992px)" srcset="assets/images/product-header-2.png">
+        <img src="assets/images/product-header-2.png" alt="product header 2">
+    </picture>
 </section>
 
 <section class="optical-product container  mb-1">
@@ -21,7 +29,7 @@ engine: ejs
         <h2 class="optical-product__name">Celluloid Combi</h2>
         <h2 class="optical-product__ctname">賽璐珞鈦金屬混合鏡框</h2>
         <div class="optical-product-list">
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-1.png" alt="product 1">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -32,7 +40,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-2.png" alt="product 2">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -43,7 +51,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-3.png" alt="product 3">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -54,7 +62,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-4.png" alt="product 4">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -65,7 +73,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-5.png" alt="product 5">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -76,7 +84,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-6.png" alt="product 6">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -87,7 +95,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-7.png" alt="product 7">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -98,7 +106,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-8.png" alt="product 8">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -109,7 +117,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-9.png" alt="product 9">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -120,7 +128,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-10.png" alt="product 10">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -131,7 +139,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-11.png" alt="product 11">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>
@@ -142,7 +150,7 @@ engine: ejs
                     </div>
                 </div>
             </div>
-            <div class="optical-product__card">
+            <div class="optical-product__card product-col-4">
                 <img src="assets/images/product-12.png" alt="product 12">
                 <div class="optical-product-item">
                     <p>BJ41600S</p>

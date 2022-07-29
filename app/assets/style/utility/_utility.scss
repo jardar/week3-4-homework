@@ -66,3 +66,32 @@
     color: white;
     background-color: black;
 }
+
+.tab-active {
+    border-bottom: 8px solid $color-primary !important;
+
+}
+
+.product-col-4 {
+    width: 23%;
+
+    @include pad() {
+        width: 46%;
+    }
+
+    @include phone() {
+        width: 100%;
+    }
+}
+
+.product-col-3 {
+    width: 30%;
+
+    @include pad() {
+        width: 46%;
+    }
+
+    @include phone() {
+        width: 100%;
+    }
+}

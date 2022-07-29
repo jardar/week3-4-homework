@@ -24,43 +24,41 @@
             @include padding-y(16px);
         }
     }
-
-    a:first-child {
-        border-bottom: 8px solid $color-primary;
-    }
 }
 
 .optical-banner {
     display: flex;
-    height: 296px;
-    // margin-bottom: 80px;
+    // height: 296px;
 
     @include phone() {
-        height: 136px;
+        // height: 136px;
         margin-bottom: 40px;
     }
 
     &__img1 {
         width: 50%;
-        @include bk-image("../images/product-header-1.png", cover);
-
+        // @include bk-image("../images/product-header-1.png", cover);
+        object-fit: cover;
     }
 
     &__img2 {
         width: 50%;
-        @include bk-image("../images/product-header-2.png", cover);
+        object-fit: cover;
+        // @include bk-image("../images/product-header-2.png", cover);
     }
 
     @include pad() {
         &__img1 {
             width: 50%;
-            @include bk-image("../images/product-header-sm-1.png", cover);
-
+            // @include bk-image("../images/product-header-sm-1.png", cover);
+            object-fit: fill;
+            object-position: right center;
         }
 
         &__img2 {
             width: 50%;
-            @include bk-image("../images/product-header-sm-2.png", cover);
+            // @include bk-image("../images/product-header-sm-2.png", cover);
+            object-fit: fill;
         }
     }
 }
@@ -100,18 +98,6 @@
 
         @include pad() {
             gap: 40px 24px;
-        }
-    }
-
-    &__card {
-        width: 23%;
-
-        @include pad() {
-            width: 46%;
-        }
-
-        @include phone() {
-            width: 100%;
         }
     }
 
@@ -186,6 +172,11 @@
                 @include set-font(16px, $fw-regular);
                 font-family: Roboto;
             }
+        }
+
+        li:first-child {
+            background-color: white;
+
         }
 
     }
