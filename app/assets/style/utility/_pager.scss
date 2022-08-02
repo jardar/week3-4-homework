@@ -1,0 +1,33 @@
+.pagebar {
+    color: $color-border-bar;
+
+    &-list {
+        display: flex;
+        justify-content: center;
+
+        li {
+
+            border: 1px solid $color-border-bar;
+
+            a {
+                @include padding-yx(12px, 16px);
+                @include set-font(18px);
+                color: black;
+
+                @include phone() {
+                    @include padding-yx(10px, 12px);
+                    @include set-font(16px);
+                }
+
+                &:hover {
+                    background-color: orange !important;
+                }
+            }
+        }
+
+        li:last-child a {
+            background-color: $color-bg-2;
+        }
+
+    }
+}

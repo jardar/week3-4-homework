@@ -4,6 +4,7 @@ footer {
 
 .footer {
     padding-top: 36px;
+    color: white;
 
     @include phone() {
         max-width: 100%;
@@ -11,7 +12,7 @@ footer {
         padding-top: 24px;
     }
 
-    &__nav {
+    &-nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -25,13 +26,13 @@ footer {
         }
     }
 
-    &__menu {
+    &-menu {
         width: 65%;
         display: flex;
         margin-left: -24px;
 
         a {
-            padding: 12px 24px;
+            @include padding-yx(12px, 24px);
 
             &:hover {
                 color: orange;
@@ -42,7 +43,7 @@ footer {
             width: 75%;
 
             a {
-                padding: 8px 24px;
+                @include padding-yx(8px, 24px);
             }
         }
 
@@ -51,7 +52,7 @@ footer {
         }
     }
 
-    &__social {
+    &-social {
         width: 35%;
         display: flex;
         justify-content: flex-end;
@@ -79,7 +80,7 @@ footer {
             }
 
             a {
-                padding: 0px 8px;
+                @include padding-yx(0px, 8px);
             }
         }
 
@@ -94,11 +95,9 @@ footer {
         }
     }
 
-    &__contact {
-        margin-bottom: 32px;
-
+    &-contact {
         li a {
-            @include set-font(36px, $fw-regular);
+            @include set-font(36px);
             display: flex;
             align-items: center;
 
@@ -114,10 +113,9 @@ footer {
 
         @include phone() {
             width: 50%;
-            margin-bottom: 24px;
 
             li a {
-                @include set-font(16px, $fw-regular);
+                @include set-font(16px);
             }
 
             span {
@@ -127,12 +125,11 @@ footer {
         }
     }
 
-    &__copyright {
+    &-copyright {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        @include padding-y(32px);
         border-top: 1px solid white;
 
         ul {
@@ -140,7 +137,7 @@ footer {
             justify-content: space-between;
 
             li {
-                @include set-font(14px, $fw-regular);
+                @include set-font(14px);
                 margin-left: 48px;
             }
 
@@ -152,9 +149,8 @@ footer {
         @include phone() {
             flex-direction: column;
             align-items: flex-start;
-            padding-top: 16px;
-            padding-bottom: 24px;
             gap: 8px 0;
+            @include padding-y(16px, 24px);
 
             ul {
                 flex-direction: column;

@@ -1,50 +1,35 @@
-.store-map {
+.mapsec {
     color: black;
-    margin-top: 96px;
-    margin-bottom: 80px;
-
-    @include pad() {
-        margin-top: 80px;
-    }
-
-    @include phone() {
-        margin-top: 40px;
-        margin-bottom: 64px;
-    }
 
     h2 {
         @include set-font(48px, $fw-bold);
         border-left: 8px solid #9F1213;
         padding-left: 16px;
-        margin-bottom: 32px;
 
         @include phone() {
             @include set-font(24px, $fw-bold);
-            margin-bottom: 24px;
         }
     }
 
     &-area {
-        @include set-font(24px, $fw-regular);
+        @include set-font(24px);
         display: flex;
         align-items: center;
         gap: 0 16px;
-        margin-bottom: 40px;
 
         @include phone() {
-            @include set-font(16px, $fw-regular);
+            @include set-font(16px);
             gap: 0 8px;
-            margin-bottom: 24px;
         }
 
         select {
-            @include set-font(18px, $fw-regular);
+            @include set-font(18px);
             border: 1px solid #CED4DA;
             width: 304px;
             height: 38px;
             color: #495057;
             opacity: 0.75;
-            padding: 6px 12px;
+            @include padding-yx(6px, 12px);
 
             @include phone() {
                 width: 276px;
@@ -101,37 +86,30 @@
         }
 
         &__title {
-            @include set-font(24px, $fw-regular);
-            padding: 8px 24px;
+            @include set-font(24px);
+            @include padding-yx(8px, 24px);
             border-bottom: 1px solid #00000020;
         }
 
         &__contact {
-            padding: 16px 24px;
+            @include padding-yx(16px, 24px);
 
-            li {
-                margin-bottom: 8px;
-            }
-
-            li:last-child {
-                margin-bottom: 0;
-            }
-
+            a,
             p {
-                @include set-font(20px, $fw-regular);
+                color: black;
+                @include set-font(20px);
                 display: flex;
                 align-items: flex-start;
-
 
                 span {
                     margin-right: 10px;
                 }
+            }
 
-
-
+            a:hover {
+                color: orange;
             }
         }
-
 
     }
 }

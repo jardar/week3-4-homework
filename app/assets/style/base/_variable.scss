@@ -11,13 +11,16 @@ $color-border-bar: #555555;
 
 $color-block-1: #5F3E2D;
 $color-block-2: #B75929;
-// color for blog page
+
+// 基礎單位
+$spacer: 4px;
 
 
 
 
 // 24/30, 36/54, 64/96
-$font-16: 16px;
+$font-base: 1rem;
+$font-16: $font-base;
 $font-24: $font-16 * 1.5; //24px
 $font-36: $font-24 * 1.5;
 $font-64: $font-16 * 4;

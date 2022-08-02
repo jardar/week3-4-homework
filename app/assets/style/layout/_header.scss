@@ -7,58 +7,82 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    @include phone() {
+    @include phone {
+        flex-wrap: wrap;
         max-width: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+    }
 
-        &__logo-holder {
-            align-self: center;
+    &-logos {
+        @include phone {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__link {
+            display: block;
+            width: 80px;
+            height: 72px;
+            @include make-logo("../images/logo-white.png", contain);
+
+            &:hover {
+                filter: contrast(50%);
+            }
+        }
+
+        &__btn {
+            display: none;
+
+            span {
+                font-size: 40px;
+            }
+
+            @include phone {
+                display: block;
+            }
         }
     }
 
-    &__logo {
-        display: block;
-        width: 80px;
-        height: 72px;
-        @include make-logo("../images/logo-white.png", contain);
 
-        &:hover {
-            filter: contrast(50%);
-        }
-    }
-
-    &__menu {
+    &-menu {
         display: flex;
+        transition: all 0.6s;
+
+        @include phone {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            overflow: hidden;
+            max-height: 0px;
+            // z-index: 120;
+
+            li {
+                width: 50%;
+            }
+        }
 
         li a {
             display: block;
             text-decoration: none;
-            @include set-font(20px, $fw-regular);
-            padding: 25px 32px;
+            @include set-font(20px);
+            @include padding-yx(25px, 32px);
             color: white;
 
             &:hover {
-                color: orange;
+                background: #8f0400;
+            }
+
+            @include phone {
+                border: 1px solid white;
+                text-align: center;
+                @include padding-y(12px);
             }
         }
 
-        @include phone() {
-            flex-wrap: wrap;
-
-            li {
-                width: 50%;
-                border: 1px solid white;
-
-                a {
-                    padding-top: 12px;
-                    padding-bottom: 12px;
-                    text-align: center;
-                }
-            }
+        &.show-menu {
+            // display: flex;
+            max-height: 200px;
         }
     }
 }

@@ -1,11 +1,11 @@
 ---
-title: 眼鏡官網 - BLOG / Event
+title: 主題活動
 layout: ./app/layout.ejs
 engine: ejs
 ---
 
 <section class="event">
-    <div class="event-header-bar">
+    <div class="event-header__bg mb-1x5 mb-md-1 mb-sm-4">
         <div class="event-header container">
             <ul class="event-header-list">
                 <li><a href="blog.html">最新消息</a></li>
@@ -21,15 +21,18 @@ engine: ejs
         </div>
     </div>
 
-    <small class="event-bread container">首頁 / 部落格 / 特別企劃 / <span>情人特別企劃</span></small>
-    <small class="event-tags container">#special<span>#event</span></small>
-    <div class="event-main container">
-        <div class="event-main-content">
+    <small class="event-bread container mb-0x5">
+        <a href="index.html">首頁</a> / <a href="blog.html">部落格</a> / <a href="event.html">特別企劃</a> /
+        <span>情人特別企劃</span></small>
+    <small class="event-tags container mb-0x5">
+        <a href="#">#special</a><span><a href="#">#event</a></span></small>
+    <div class="event-subject container mb-2x5 mb-sm-16">
+        <div class="event-body">
             <h2>情人特別企劃</h2>
-            <small>2020 Valentine’s Special</small>
-            <ul class="event-main-content-list">
-                <li>
-                    <img src="assets/images/blogpage-1.png" alt="blog 1">
+            <small class="mb-1 mb-md-3 mb-sm-4">2020 Valentine’s Special</small>
+            <ul class="event-list">
+                <li class="mb-2x5 mb-md-3 mb-sm-4">
+                    <img class="mb-0x5 mb-md-2 mb-sm-2" src="assets/images/blogpage-1.png" alt="blog 1">
                     <p>
                         一年一度西洋情人節即將到來，我們推出最強「情人節企劃」，為這個甜蜜的節日加溫。 本次拍攝的鏡框款式與 NEEDS CLASSIC
                         聯名設計款，偶爾跟另一半來個低調情侶單品，結合彼此喜好、找出合適框型款式，在這個春夏輕鬆搭出屬於你們的甜蜜默契！
@@ -52,37 +55,38 @@ engine: ejs
                 </li>
             </ul>
         </div>
-        <div class="event-main-taglist">
+        <div class="event-taglist">
             <p><span class="material-symbols-outlined">
                     label
                 </span>
                 TAGS
             </p>
             <small>
-                #special<span>#sale</span>
+                <a href="#">#special</a><span><a href="#">#sale</a></span>
             </small>
 
             <small>
-                #new_item<span>#interview</span>
+                <a href="#">#new_item</a><span><a href="#">#interview</a></span>
             </small>
 
             <small>
-                #trivia<span>#news</span>
+                <a href="#"> #trivia</a><span><a href="#">#news</a></span>
             </small>
 
             <small>
-                #event
+                <a href="#">#event</a>
             </small>
 
         </div>
     </div>
+
     <div class="event-footer container">
-        <ul class="event-footer-iconlist">
-            <li><a href="#">Share</a></li>
+        <ul class="event-iconlist mb-1">
+            <li>Share</li>
             <li><a href="#"><img src="assets/images/logo-facebook.png" alt="facebook"></a></li>
             <li><a href="#"><img src="assets/images/logo-instagram.png" alt="instagram"></a></li>
         </ul>
-        <div class="event-footer-nav">
+        <div class="event-nav mb-5">
             <a href="#">
                 <span class="material-symbols-outlined">
                     arrow_back
@@ -95,7 +99,6 @@ engine: ejs
                     arrow_forward
                 </span>
             </a>
-
         </div>
     </div>
 </section>

@@ -1,21 +1,9 @@
 .event {
-    color: black;
-
-    &-header-bar {
+    &-header__bg {
         background-color: $color-red-dark;
-        margin-bottom: 24px;
-
-        @include pad() {
-            margin-bottom: 8px;
-        }
-
-        @include phone() {
-            margin-bottom: 16px;
-        }
     }
 
     &-header {
-        color: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -25,19 +13,20 @@
             justify-content: space-around;
         }
 
-
         &-list {
             display: flex;
 
-
-            li a {
+            a {
                 @include set-font(20px, $fw-bold);
                 @include padding-x(24px);
 
                 @include phone() {
                     @include set-font(16px, $fw-bold);
                     @include padding-y(12px);
+                }
 
+                &:hover {
+                    color: orange;
                 }
             }
 
@@ -60,14 +49,26 @@
                 font-size: 40px;
                 vertical-align: middle;
             }
+
+            &:hover {
+                color: orange;
+            }
         }
 
     }
 
     &-bread {
-        @include set-font(16px, $fw-regular);
+        @include set-font(16px);
         display: block;
-        margin-bottom: 8px;
+
+        a {
+            color: black;
+            display: inline-block;
+
+            &:hover {
+                color: orange;
+            }
+        }
 
         span {
             color: $color-primary;
@@ -76,12 +77,20 @@
 
     &-tags {
         display: block;
-        color: $color-primary;
-        margin-bottom: 8px;
+        // color: $color-primary;
         @include set-font(24px, $fw-bold);
 
         @include phone() {
             @include set-font(16px, $fw-bold);
+        }
+
+        a {
+            color: $color-primary;
+            display: inline-block;
+
+            &:hover {
+                color: orange;
+            }
         }
 
         span {
@@ -89,128 +98,109 @@
         }
     }
 
-    &-main {
+    &-subject {
         display: flex;
         gap: 0 24px;
-        margin-bottom: 40px;
+    }
+
+    &-body {
+        width: 66%;
+
+        @include pad() {
+            width: 75%;
+        }
 
         @include phone() {
-            margin-bottom: 64px;
+            width: 100%;
         }
 
-        &-content {
-            width: 66%;
+        h2 {
+            @include set-font(48px);
+
+            @include phone() {
+                @include set-font(24px);
+            }
+        }
+
+        small {
+            display: block;
+            @include set-font(24px, $fw-medium);
+
+
+            @include phone() {
+                margin-bottom: 16px;
+            }
+        }
+
+    }
+
+    &-list {
+
+
+        img {
+            object-fit: cover;
+        }
+
+        p {
+            @include set-font(16px);
+        }
+    }
+
+    &-taglist {
+        width: 33%;
+        color: $color-primary;
+
+        @include phone() {
+            display: none;
+        }
+
+        p {
+            @include set-font(32px, $fw-bold);
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+
 
             @include pad() {
-                width: 75%;
+                @include set-font(16px, $fw-bold);
+                margin-bottom: 8px;
             }
 
-            @include phone() {
-                width: 100%;
-            }
+            span {
+                font-size: 48px;
+                margin-right: 8px;
 
-            h2 {
-                @include set-font(48px, $fw-regular);
-
-                @include phone() {
-                    @include set-font(24px, $fw-regular);
-                }
-            }
-
-            small {
-                display: block;
-                @include set-font(24px, $fw-medium);
-                margin-bottom: 16px;
 
                 @include pad() {
-                    margin-bottom: 24px;
-                }
-
-                @include phone() {
-                    @include set-font(16px, $fw-medium);
-                    margin-bottom: 16px;
-                }
-            }
-
-            &-list {
-                li {
-                    margin-bottom: 40px;
-
-                    @include pad() {
-                        margin-bottom: 24px;
-                    }
-
-                    @include phone() {
-                        margin-bottom: 16px;
-                    }
-                }
-
-                img {
-                    object-fit: cover;
-                    margin-bottom: 8px;
-
-                    @include pad() {
-                        margin-bottom: 16px;
-                    }
-
-                    @include phone() {
-                        margin-bottom: 8px;
-                    }
-                }
-
-                p {
-                    @include set-font(16px, $fw-regular);
+                    font-size: 16px;
+                    margin-right: 2px;
                 }
             }
         }
 
-        &-taglist {
-            width: 33%;
-            color: $color-primary;
+        small {
+            display: block;
+            @include set-font(24px, $fw-bold);
 
-            @include phone() {
-                display: none;
-            }
+            margin-bottom: 4px;
 
-            p {
-                @include set-font(32px, $fw-bold);
-                display: flex;
-                align-items: center;
-                margin-bottom: 4px;
+            a {
+                color: $color-primary;
+                display: inline-block;
 
-
-                @include pad() {
-                    @include set-font(16px, $fw-bold);
-                    margin-bottom: 8px;
-                }
-
-                span {
-                    font-size: 48px;
-                    margin-right: 8px;
-
-
-                    @include pad() {
-                        font-size: 16px;
-                        margin-right: 2px;
-                    }
+                &:hover {
+                    color: orange;
                 }
             }
 
-            small {
-                display: block;
-                @include set-font(24px, $fw-bold);
+            span {
+                margin-left: 16px;
+            }
 
-                margin-bottom: 4px;
+            @include pad() {
+                @include set-font(16px, $fw-bold);
+                margin-bottom: 0;
 
-                span {
-                    margin-left: 16px;
-                }
-
-                @include pad() {
-                    @include set-font(16px, $fw-bold);
-                    margin-bottom: 0;
-
-                }
             }
         }
     }
@@ -219,46 +209,60 @@
         @include phone() {
             display: none;
         }
+    }
 
-        &-iconlist {
-            display: flex;
-            gap: 0 16px;
-            margin-bottom: 16px;
+    &-iconlist {
+        width: 66%;
+        display: flex;
+        gap: 0 16px;
+        @include set-font(16px, $fw-bold);
+        border-bottom: 1px solid #707070;
+        padding-bottom: 24px;
 
-            a {
-                @include set-font(16px, $fw-bold);
-                color: black;
+        a {
+
+            // color: black;
+            &:hover {
+                color: orange;
+                filter: opacity(50%);
             }
-
-            img {
-                width: 24px;
-                height: 24px;
-            }
-
-
         }
 
-        &-nav {
-            border-top: 1px solid #707070;
-            padding-top: 24px;
-            margin-bottom: 80px;
-            display: flex;
-            justify-content: space-between;
-
-
-            a {
-                @include set-font(16px, $fw-regular);
-                @include padding-x(16px);
-                color: black;
-
-                span {
-                    vertical-align: middle;
-                    font-size: 22px;
-
-                }
-            }
+        img {
+            width: 24px;
+            height: 24px;
         }
     }
 
+    &-nav {
+        width: 66%;
+        // border-top: 1px solid #707070;
+        // padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        // vertical-align: middle;
+
+        a {
+            display: flex;
+            align-items: center;
+            @include set-font(16px);
+            @include padding-x(16px);
+            color: black;
+            // vertical-align: middle;
+            font-family: 'Noto Sans TC';
+
+            span {
+                // vertical-align: middle;
+                // font-size: 24px;
+                // margin-right: 12px;
+                // margin-left: 12px;
+            }
+
+            &:hover {
+                color: orange;
+            }
+        }
+    }
 
 }

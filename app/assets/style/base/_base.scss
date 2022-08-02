@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Roboto', 'Noto Sans TC', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
 }
 
 a {
@@ -34,5 +38,4 @@ img {
     @include phone() {
         @include container(372px);
     }
-
 }
