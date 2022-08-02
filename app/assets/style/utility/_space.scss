@@ -1,49 +1,27 @@
 // margin bottom
-// mb-1: 16px
-// mb-md-1: 8px
+// mb-1: 4px
+// mb-md-1: 4px
 // mb-sm-1: 4px
-@for $i from 1 through 6 {
+// 為避免產生太多，比較特別的尺寸額外定義
+@for $i from 1 through 24 {
     .mb-#{$i} {
-        margin-bottom: $spacer *4 * $i;
+        margin-bottom: $spacer * $i;
     }
 }
 
-.mb-0x5 {
-    margin-bottom: 8px;
-}
 
-.mb-1x5 {
-    margin-bottom: 24px;
-}
-
-.mb-2x5 {
-    margin-bottom: 40px;
-}
-
-.mb-3x75 {
-    margin-bottom: 60px;
-}
-
-.mb-7x75 {
-    margin-bottom: 124px;
-}
 
 @include pad {
     @for $i from 1 through 12 {
         .mb-md-#{$i} {
-            margin-bottom: $spacer *2 * $i;
+            margin-bottom: $spacer * $i;
         }
     }
 }
 
-@include pad {
-    .mb-md-0x5 {
-        margin-bottom: 4px;
-    }
-}
 
 @include phone {
-    @for $i from 1 through 18 {
+    @for $i from 1 through 16 {
         .mb-sm-#{$i} {
             margin-bottom: $spacer * $i;
         }
@@ -51,25 +29,25 @@
 }
 
 //margin top
-// mt-1: 16px
-// mt-md-1: 8px
+// mt-1: 4px
+// mt-md-1: 4px
 // mt-sm-1: 4px
-@for $i from 1 through 6 {
+@for $i from 1 through 24 {
     .mt-#{$i} {
-        margin-top: $spacer *4 * $i;
+        margin-top: $spacer * $i;
     }
 }
 
 @include pad {
     @for $i from 1 through 12 {
         .mt-md-#{$i} {
-            margin-top: $spacer *2 * $i;
+            margin-top: $spacer * $i;
         }
     }
 }
 
 @include phone {
-    @for $i from 1 through 18 {
+    @for $i from 1 through 16 {
         .mt-sm-#{$i} {
             margin-top: $spacer * $i;
         }

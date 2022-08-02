@@ -18,11 +18,12 @@ $spacer: 4px;
 
 
 
-// 24/30, 36/54, 64/96
+// 14,16,18,19,20,24,32,36,40,42,48,64,
 $font-base: 1rem;
+
 $font-16: $font-base;
-$font-24: $font-16 * 1.5; //24px
-$font-36: $font-24 * 1.5;
+$font-24: $font-16 * 1.5; // 24px
+$font-36: $font-24 * 1.5; // 36px
 $font-64: $font-16 * 4;
 
 $fw-regular: 400;

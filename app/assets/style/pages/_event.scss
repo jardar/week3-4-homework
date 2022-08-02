@@ -221,7 +221,6 @@
 
         a {
 
-            // color: black;
             &:hover {
                 color: orange;
                 filter: opacity(50%);
@@ -236,12 +235,8 @@
 
     &-nav {
         width: 66%;
-        // border-top: 1px solid #707070;
-        // padding-top: 24px;
         display: flex;
         justify-content: space-between;
-        // align-items: center;
-        // vertical-align: middle;
 
         a {
             display: flex;
@@ -249,15 +244,8 @@
             @include set-font(16px);
             @include padding-x(16px);
             color: black;
-            // vertical-align: middle;
-            font-family: 'Noto Sans TC';
 
-            span {
-                // vertical-align: middle;
-                // font-size: 24px;
-                // margin-right: 12px;
-                // margin-left: 12px;
-            }
+            font-family: 'Noto Sans TC'; //強制此時只用 noto, 對齊比較順眼
 
             &:hover {
                 color: orange;

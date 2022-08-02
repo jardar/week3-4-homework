@@ -11,7 +11,7 @@
     padding-right: $gutter/2;
 }
 
-// 24/30, 36/54, 64/96
+// 
 @mixin set-font($fz:1rem, $fw:400, $lh:1.5) {
     font-size: $fz;
     line-height: $lh;
@@ -69,6 +69,7 @@
 //      @include pad(){
 //          width: 70%;
 //      }    
+// }
 @mixin rwd($break-point) {
     @media (max-width: $break-point) {
         @content;
