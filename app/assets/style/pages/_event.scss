@@ -143,6 +143,7 @@
 
         p {
             @include set-font(16px);
+            color: $color-border-bar;
         }
     }
 

@@ -100,7 +100,9 @@
             text-align: right;
         }
 
-        p:first-child {
+        h3 {
+            width: 50%;
+            @include set-font(24px);
             color: black;
             text-align: left;
         }

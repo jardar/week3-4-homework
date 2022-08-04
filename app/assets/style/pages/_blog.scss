@@ -92,6 +92,20 @@
         }
     }
 
+    &__md-more {
+        @include pad() {
+            display: inline;
+            @include set-font(16px);
+            color: black;
+            text-align: right;
+
+            &:hover {
+                color: orange;
+            }
+
+        }
+    }
+
     &__more {
         a {
             @include set-font(36px, $fw-black);

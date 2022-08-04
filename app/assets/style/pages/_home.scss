@@ -109,6 +109,7 @@
 
         p {
             color: black;
+            text-align: left;
         }
     }
 }
@@ -156,6 +157,7 @@
     h3 {
         @include set-font(48px);
         color: $color-primary;
+        font-style: italic;
     }
 
 }
@@ -388,7 +390,8 @@
         ::placeholder {
             color: rgba(black, 0.2);
             @include set-font(16px);
-            padding-left: 12px;
+
+            @include padding-yx(6px, 12px)
         }
 
         button {
